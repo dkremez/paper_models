@@ -2,21 +2,27 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-$font-size-base: 16px;
+.jumbotron {
+  margin: 80px 0;
+  text-align: center;
+}
 
 .navbar-inner {
-    text-align: center;
-    background-color: sRGB(29,23,23);
-    background-image: none;
+  text-align: center;
+  background-color: RGB(29,23,23);
+  background-image: none;
+  margin: 0;
 }
 .navbar .navbar-inner .nav {
-    float: none;
-    display:inline-block;
-    font-size: 16px;
+  float: none;
+  display:inline-block;
+  font-size: 16px; 
 }
-
-.container {
-  margin: 0px auto;
-  padding-right:24px;
-  padding-left:24px;
+.navbar .nav > li > a {
+    color: #BB4040;
+    text-shadow: 0 1px 0;
+}
+.navbar .nav > li > a:hover {
+    color: RGB(216,60,58);
+    text-shadow: 0 1px 0;
 }

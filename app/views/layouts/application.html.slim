@@ -12,11 +12,10 @@ html
     / application layout styled for Bootstrap 2.3
     header
       == render 'layouts/navigation'
-    main[role="main"]
-      .container
-        .content
-          .row
-            .span12
-              == render 'layouts/messages'
-              == yield
-          footer
+    .container
+      .content
+        .row
+          .span12
+            == render 'layouts/messages'
+            == yield
+        footer

@@ -1,22 +1,19 @@
-
-
-
-
-
-
-
-.row
+ul.thumbnails
   - @products.each do |product|
-    .span3
+    li.span3
       .thumbnail
         = image_tag(product.photo_url(:thumb), style: "width: 300px; height: 200px;")
-      .caption
-        h3 = link_to product.title, product_path(product)
+      .caption.text-center
+        h3 = link_to product.title, product_path(product), remote: true
       .p
         = product.description
+      .p
+        .btn.btn-success.pull-right
+          = link_to "#{product.price} $", product_path(product), remote: true ,
+                                                                 'data-toggle'=>"modal",
+                                                                 'data-target' => '#productModal'
 
-
-/ h1 Listing products
+.modal.fade.bs-example-modal-lg id='productModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
 
 / table
 /   tr

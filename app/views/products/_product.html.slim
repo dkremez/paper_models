@@ -1,0 +1,38 @@
+.modal-dialog.modal-lg
+  p#notice = notice
+  .modal-content
+    .modal-header
+      h3
+        strong Title:
+        = @product.title
+    .model-body
+      .row-fluid
+        .span6
+          p
+            strong Description:
+            = @product.description
+          p
+            strong Scale:
+            = @product.scale
+          p
+            strong Format:
+            = @product.format
+          p
+            strong Number of sheets:
+            = @product.number_of_sheets
+          p
+            strong Author:
+            = @product.author
+          p
+            strong Price:
+            = @product.price
+          p
+            strong Complexity:
+            = @product.complexity
+          p
+            strong Publication date:
+            = @product.publication_date
+        .span6
+          = image_tag(@product.photo_url(:thumb), style: "width: 300px; height: 200px;", class: 'img-polaroid')
+    .modal-footer
+      = link_to 'Back', products_path , class: 'btn btn-primary'
