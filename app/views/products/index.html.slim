@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+.row
+  - @products.each do |product|
+    .span3
+      .thumbnail
+        = image_tag(product.photo_url(:thumb), style: "width: 300px; height: 200px;")
+      .caption
+        h3 = link_to product.title, product_path(product)
+      .p
+        = product.description
+
+
+/ h1 Listing products
+
+/ table
+/   tr
+/     th Title
+/     th Description
+/     th Scale
+/     th Format
+/     th Number of sheets
+/     th Author
+/     th Price
+/     th Complexity
+/     th Publication date
+/     th
+/     th
+/     th
+
+/   - @products.each do |product|
+/     tr
+/       td = product.title
+/       td = product.description
+/       td = product.scale
+/       td = product.format
+/       td = product.number_of_sheets
+/       td = product.author
+/       td = product.price
+/       td = product.complexity
+/       td = product.publication_date
+/       td = link_to 'Show', product
+/       td = link_to 'Edit', edit_product_path(product)
+/       td = link_to 'Destroy', product, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Product', new_product_path

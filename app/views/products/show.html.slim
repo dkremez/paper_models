@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @product.title
+p
+  strong Description:
+  = @product.description
+p
+  strong Scale:
+  = @product.scale
+p
+  strong Format:
+  = @product.format
+p
+  strong Number of sheets:
+  = @product.number_of_sheets
+p
+  strong Author:
+  = @product.author
+p
+  strong Price:
+  = @product.price
+p
+  strong Complexity:
+  = @product.complexity
+p
+  strong Publication date:
+  = @product.publication_date
+
+= link_to 'Edit', edit_product_path(@product)
+'|
+= link_to 'Back', products_path

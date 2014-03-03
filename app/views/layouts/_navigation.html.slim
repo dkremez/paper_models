@@ -11,6 +11,14 @@
           nav.navbar-inner
             ul.nav
               li
-                = link_to 'Home', root_path
+                = link_to 'Моделирование', root_path
               li
-                == render 'layouts/navigation_links'
+                = link_to 'Продукты', products_path
+              li
+                = link_to 'Разработка', root_path
+              li
+                = link_to 'Статьи', root_path
+              li
+                = link_to 'О нас', root_path
+              li
+                / == render 'layouts/navigation_links'
