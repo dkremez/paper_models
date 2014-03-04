@@ -8,7 +8,7 @@ ul.thumbnails
       .p
         = product.description
       .p
-        .btn.btn-success.pull-right
+        .btn.btn-success
           = link_to show_price(product.price), product_path(product), remote: true ,
                                                                  'data-toggle'=>"modal",
                                                                  'data-target' => '#productModal'
