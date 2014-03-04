@@ -10,6 +10,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'devise'
 gem 'mysql2'
+gem 'rails_12factor', group: :production
+gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'carrierwave'
