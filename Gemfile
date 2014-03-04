@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'activeadmin', github: 'gregbell/active_admin'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]

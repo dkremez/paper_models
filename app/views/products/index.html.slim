@@ -9,42 +9,9 @@ ul.thumbnails
         = product.description
       .p
         .btn.btn-success.pull-right
-          = link_to "#{product.price} $", product_path(product), remote: true ,
+          = link_to show_price(product.price), product_path(product), remote: true ,
                                                                  'data-toggle'=>"modal",
                                                                  'data-target' => '#productModal'
 
 .modal.fade.bs-example-modal-lg id='productModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
 
-/ table
-/   tr
-/     th Title
-/     th Description
-/     th Scale
-/     th Format
-/     th Number of sheets
-/     th Author
-/     th Price
-/     th Complexity
-/     th Publication date
-/     th
-/     th
-/     th
-
-/   - @products.each do |product|
-/     tr
-/       td = product.title
-/       td = product.description
-/       td = product.scale
-/       td = product.format
-/       td = product.number_of_sheets
-/       td = product.author
-/       td = product.price
-/       td = product.complexity
-/       td = product.publication_date
-/       td = link_to 'Show', product
-/       td = link_to 'Edit', edit_product_path(product)
-/       td = link_to 'Destroy', product, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Product', new_product_path
