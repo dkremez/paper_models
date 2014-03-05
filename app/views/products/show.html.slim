@@ -21,4 +21,11 @@ br
   ul.thumbnails
     - @images.each do |image|
       li.span4
-        = image_tag(image.photo_url(:thumb), class: 'img-rounded')
+        = link_to image_tag(image.photo_url(:thumb), class: 'img-rounded'),
+                  image_path(image), remote: true,
+                                                'data-toggle'=>"modal",
+                                                'data-target' => '#imageModal'
+
+
+.modal.fade.bs-example-modal-lg id='imageModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
+
