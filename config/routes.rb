@@ -8,4 +8,6 @@ PaperModels::Application.routes.draw do
   resources :products, :only => [:index,:show]
 
   devise_for :users
+
+  post '/contact_us', to: 'home#contact_us'
 end

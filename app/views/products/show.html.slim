@@ -1,1 +1,18 @@
-= render @product
+.row-fluid
+  .span5
+      = image_tag(@product.photo_url(:thumb), class: 'img-polaroid')
+  .span6
+    .well
+      = @product.description
+    .well 
+      strong Маштаб: &nbsp
+      = @product.scale
+    .well
+      strong Формат: &nbsp
+      = @product.format
+    .well
+      strong Количество страниц: &nbsp
+      = @product.number_of_sheets
+    .well
+      strong Сложность: &nbsp
+      = @product.complexity 

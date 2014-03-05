@@ -13,3 +13,8 @@
 #   $("form#new_group").prepend errorMessage
 $ ->
   $('productModal').modal('options')
+
+  # $('a').hover(->
+  #   $(this).closest('button').css('visibility': 'visible')
+  #  , ->
+  #   $(this).closest('button').css('visibility': 'hidden')

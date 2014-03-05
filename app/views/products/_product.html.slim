@@ -7,33 +7,27 @@
         = @product.title
     .model-body
       .row-fluid
+        .span5
+            = image_tag(@product.photo_url(:thumb), class: 'img-polaroid')
         .span6
-          p
-            strong Description:
+          .well
             = @product.description
-          p
-            strong Scale:
+          .well 
+            strong Маштаб: &nbsp
             = @product.scale
-          p
-            strong Format:
+          .well
+            strong Формат: &nbsp
             = @product.format
-          p
-            strong Number of sheets:
+          .well
+            strong Количество страниц: &nbsp
             = @product.number_of_sheets
-          p
-            strong Author:
-            = @product.author
-          p
-            strong Price:
-            = @product.price
-          p
-            strong Complexity:
-            = @product.complexity
-          p
-            strong Publication date:
-            = @product.publication_date
-        .span6
-          = image_tag(@product.photo_url(:thumb), style: "width: 300px; height: 200px;", class: 'img-polaroid')
+          .well
+            strong Сложность: &nbsp
+            = @product.complexity     
     .modal-footer
-      = link_to show_price(@product.price), @product.buy_url , class: 'btn btn-success pull-left'
-      = link_to 'Back', products_path , class: 'btn btn-primary'
+      .row
+        .span2
+          = button_to "Детальная информация", @product , class: 'btn btn-primary pull-left', method: :get
+        .span2
+          = button_to show_price(@product.price), @product.buy_url , class: 'btn btn-success pull-left', method: :get
+        = button_to 'Back', products_path , class: 'btn btn-primary', method: :get

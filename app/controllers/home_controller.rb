@@ -4,4 +4,12 @@ class HomeController < ApplicationController
 
   def about_us
   end
+
+  def contact_us
+    name = params[:name]
+    email = params[:email]
+    body = params[:comments]
+    Contact.contact_email(name, email, body).deliver
+    redirect_to :back, notice: 'Message sent'
+  end
 end

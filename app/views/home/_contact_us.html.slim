@@ -1,0 +1,12 @@
+= form_tag(contact_us_path) do
+  .form-group
+    = label_tag 'name', 'Имя'
+    = text_field_tag 'name', nil, class: 'form-control', placeholder: 'Ваше имя'
+  .form-group
+    = label_tag 'email', 'Email'
+    = email_field_tag 'email', nil, class: 'form-control', placeholder: 'Ваш email адрес'
+  .form-group
+    = label_tag 'comments', 'Отзыв'
+    = text_area_tag 'comments', nil, class: 'form-control', rows: 4, placeholder: 'Отзыв...'
+  br
+  = submit_tag nil, class: 'btn btn-default btn-primary pull-left'

@@ -2,16 +2,23 @@ ul.thumbnails
   - @products.each do |product|
     li.span3
       .thumbnail
-        = image_tag(product.photo_url(:thumb), style: "width: 300px; height: 200px;")
+        = link_to image_tag(product.photo_url(:thumb)),
+            product_path(product), remote: true,
+                                  'data-toggle'=>"modal",
+                                  'data-target' => '#productModal'
+        button.submit style="visibility: hidden;" Быстрый просмотр
+          
       .caption.text-center
-        h3 = link_to product.title, product_path(product), remote: true
-      .p
-        = product.description
-      .p
-        .btn.btn-success
-          = link_to show_price(product.price), product_path(product), remote: true ,
+        h3 = link_to product.title, product_path(product), remote: true,
                                                                  'data-toggle'=>"modal",
                                                                  'data-target' => '#productModal'
+      .p
+        = product.description
+      / .p
+      /   .btn.btn-success
+      /     = link_to show_price(product.price), product_path(product), remote: true ,
+      /                                                            'data-toggle'=>"modal",
+      /                                                            'data-target' => '#productModal'
 
 .modal.fade.bs-example-modal-lg id='productModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
 
