@@ -2,7 +2,7 @@ ul.thumbnails
   - @products.each do |product|
     li.span3
       .thumbnail style='height:200px;width:270px'
-        = link_to image_tag(product.photo_url(:thumb), style: 'height:200px;width:270px'),
+        = link_to image_tag(product.photo_url(:thumb), style: 'height:180px;width:260px'),
             product_path(product), remote: true,
                                   'data-toggle'=>"modal",
                                   'data-target' => '#productModal'
