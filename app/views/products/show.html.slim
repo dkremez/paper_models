@@ -16,3 +16,9 @@
     .well
       strong Сложность: &nbsp
       = @product.complexity 
+br
+.row
+  ul.thumbnails
+    - @images.each do |image|
+      li.span4
+        = image_tag(image.photo_url(:thumb), class: 'img-rounded')
