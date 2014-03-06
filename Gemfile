@@ -15,6 +15,8 @@ gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'carrierwave'
+gem "fog"
+gem 'unf' 
 gem 'rmagick'
 gem 'activeadmin', github: 'gregbell/active_admin'
 group :development do
