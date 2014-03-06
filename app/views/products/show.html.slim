@@ -17,15 +17,13 @@
       strong Сложность: &nbsp
       = @product.complexity 
 br
-.row
-  ul.thumbnails
-    - @images.each do |image|
-      li.span4
-        = link_to image_tag(image.photo_url(:thumb), class: 'img-rounded'),
-                  image_path(image), remote: true,
-                                                'data-toggle'=>"modal",
-                                                'data-target' => '#imageModal'
+.hero-unit
+  .row
+    ul.thumbnails data-toggle="lightbox"
+      - @images.each do |image|
+        li.span4
+          = link_to image_tag(image.photo_url(:thumb), class: 'img-rounded' ),
+                    image.photo_url, class: 'thumbnail', 'data-title' => image.title                                             
 
-
-.modal.fade.bs-example-modal-lg id='imageModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
-
+= stylesheet_link_tag "bootstrap.lightbox.css"
+= javascript_include_tag "bootstrap.lightbox.js"

@@ -8,7 +8,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 2.3.2.2'
-gem 'bootstrap-addons-rails'
 gem 'devise'
 gem 'mysql2'
 gem 'rails_12factor', group: :production
