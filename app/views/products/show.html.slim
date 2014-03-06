@@ -17,11 +17,10 @@
       strong Сложность: &nbsp
       = @product.complexity 
 br
-.hero-unit
-  .row
-    ul.thumbnails data-toggle="lightbox"
-      - @images.each do |image|
-        li.span4
-          = link_to image_tag(image.photo_url(:thumb), class: 'img-rounded' ),
-                    image.photo_url, class: 'thumbnail', 'data-title' => image.title                                             
+.row
+  ul.thumbnails data-toggle="lightbox"
+    - @images.each do |image|
+      li.span4
+        = link_to image_tag(image.photo_url(:thumb), class: 'img-rounded' ),
+                  image.photo_url, class: 'thumbnail', 'data-title' => image.title                                             
 
