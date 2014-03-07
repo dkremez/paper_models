@@ -13,7 +13,12 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "git@github.com:kremez19/paper_models.git"
 set :branch, "master"
-set :rvm_type, :user
+set :rvm_ruby_string, :local              # use the same ruby as used locally for deployment
+set :rvm_autolibs_flag, "read-only"       # more info: rvm help autolibs
+
+before 'deploy:setup', 'rvm:install_rvm'  # install/update RVM
+before 'deploy:setup', 'rvm:install_ruby' # install Ruby and create gemset, OR:
+# before 'deploy:setup', 'rvm:create_gemset' # only create gemset
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
