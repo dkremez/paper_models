@@ -15,6 +15,9 @@ role :db,  %w{deploy@188.226.160.79}
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 set :stage, :production
+set :scm, :git
+set :branch, "master"
+set :user, "deploy"
 
 server '188.226.160.79', user: 'deploy', roles: %w{web app}, my_property: :my_value
 
