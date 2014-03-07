@@ -13,7 +13,7 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "git@github.com:kremez19/paper_models.git"
 set :branch, "master"
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
+set :rvm_type, :user
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
