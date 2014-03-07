@@ -11,10 +11,9 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "ggit@github.com:kremez19/paper_models.git"
+set :repository, "git@github.com:kremez19/paper_models.git"
 set :branch, "master"
-
-
+set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
