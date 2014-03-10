@@ -32,7 +32,11 @@
               
         a.left.carousel-control data-slide="prev" href="#myCarousel" &lsaquo; 
         a.right.carousel-control data-slide="next" href="#myCarousel" &rsaquo;
-  .span4
+  .span4.hero-unit
     h2 Отзывы:
+    - @reviews.each do |review|
+      h4 = review.author
+      p = review.body
+    = link_to 'Все отзывы', root_path
 
 / a.btn.btn-large.btn-success.text-center href="#" Статьи

@@ -21,8 +21,18 @@
 br
 .row
   ul.thumbnails data-toggle="lightbox"
-    - @images.each do |image|
+    - @admin_images.each do |image|
       li.span3
         = link_to image_tag(image.photo_url(:thumb), class: 'img-rounded' ),
-                  image.photo_url, class: 'thumbnail', 'data-title' => image.title                                             
+                  image.photo_url, class: 'thumbnail', 'data-title' => image.title 
+
+br
+.row
+  h2 = 'Фото пользователей:' unless @users_images.empty?
+  br
+  ul.thumbnails data-toggle="lightbox"
+    - @users_images.each do |image|
+      li.span3
+        = link_to image_tag(image.photo_url(:thumb), class: 'img-rounded' ),
+                  image.photo_url, class: 'thumbnail', 'data-title' => image.title                                            
 

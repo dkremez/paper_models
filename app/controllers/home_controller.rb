@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @reviews = Review.limit(4)
   end
 
   def about_us
