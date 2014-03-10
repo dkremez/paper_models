@@ -15,9 +15,7 @@ ul.thumbnails
       p
         = product.description
       p
-        = link_to 'Подробнее', product_path(product), remote: true ,
-                                                                 'data-toggle'=>"modal",
-                                                                 'data-target' => '#productModal'
+        = link_to 'Подробнее', product_path(product)
 
 .modal.fade.bs-example-modal-lg id='productModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
 
