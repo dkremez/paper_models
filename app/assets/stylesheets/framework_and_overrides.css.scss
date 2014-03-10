@@ -7,6 +7,11 @@
   text-align: center;
 }
 
+.row-fluid .span5 {
+  margin: 80px 0;
+  text-align: center;
+}
+
 .navbar-inner {
   text-align: center;
   background-color: RGB(29,23,23);
@@ -28,13 +33,6 @@
     text-decoration: underline; 
 }
 
-.thumbnails li.span3 {
-  height: 400px; 
-  a, a:hover {
-    text-decoration: none; 
-    text-align: center;
-  }
-}
 .footer {
   background-color: RGB(29,23,23);
   color: RGB(255,255,255);

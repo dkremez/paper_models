@@ -1,30 +1,38 @@
 .jumbotron
-  h1 Вы находитесь на главной странице сайта.
-  p.lead 
-    |Здесь вы можете найти готовые модели для сборки. Для каждой модели Вы можете скачать пробную деталь и оценить качество модели перед покупкой. Также некоторые модели можно скачать бесплатно - сможете ли вы вообще такое собирать.
-    |Если вы готовы перейти к выбору модели для покупки - идите в каталог.
-    |Если вы хотите чтобы для вас сделали персональную развертку - переходите в раздел разработка моделей
+  .row-fluid
+    .span6.hero-unit
+      h1 Papercrafter
+      br
+      p.lead 
+        | Магазин бумажных моделек автомобилей.
+    .span6.hero-unit
+      h2
+        | Собери свою машину мечты!
+  br
   = link_to 'Каталог', products_path, class: 'btn btn-large btn-success'
 
 .row-fluid
-  .bs-docs-example
-    #myCarousel.carousel.slide.img-polaroid
-      ol.carousel-indicators
-        li.active data-slide-to="0" data-target="#myCarousel"
-        li data-slide-to="1" data-target="#myCarousel"
-        li data-slide-to="2" data-target="#myCarousel"
-      .carousel-inner
+  .span8
+    .bs-docs-example
+      #myCarousel.carousel.slide.img-polaroid
+        ol.carousel-indicators
+          li.active data-slide-to="0" data-target="#myCarousel"
+          li data-slide-to="1" data-target="#myCarousel"
+          li data-slide-to="2" data-target="#myCarousel"
+        .carousel-inner
 
-        .item.active
-          = image_tag("home/1.png")
-           
-        .item
-           = image_tag("home/2.png")
-            
-        .item
-          = image_tag("home/3.png")
-            
-      a.left.carousel-control data-slide="prev" href="#myCarousel" &lsaquo; 
-      a.right.carousel-control data-slide="next" href="#myCarousel" &rsaquo;
+          .item.active
+            = image_tag("home/1.png")
+             
+          .item
+            = image_tag("home/2.png")
+              
+          .item
+            = image_tag("home/3.png")
+              
+        a.left.carousel-control data-slide="prev" href="#myCarousel" &lsaquo; 
+        a.right.carousel-control data-slide="next" href="#myCarousel" &rsaquo;
+  .span4
+    h2 Отзывы:
 
 / a.btn.btn-large.btn-success.text-center href="#" Статьи

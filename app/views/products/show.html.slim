@@ -1,6 +1,8 @@
 .row-fluid
   .span5
       = image_tag(@product.photo_url(:thumb), class: 'img-polaroid')
+      br
+      = button_to show_price(@product.price), @product.buy_url , class: 'btn btn-large btn-success', method: :get
   .span6
     .well
       = @product.description
@@ -20,7 +22,7 @@ br
 .row
   ul.thumbnails data-toggle="lightbox"
     - @images.each do |image|
-      li.span4
+      li.span3
         = link_to image_tag(image.photo_url(:thumb), class: 'img-rounded' ),
                   image.photo_url, class: 'thumbnail', 'data-title' => image.title                                             
 

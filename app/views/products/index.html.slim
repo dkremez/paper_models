@@ -1,6 +1,6 @@
 ul.thumbnails
   - @products.each do |product|
-    li.span3
+    li.span3.catalog
       .thumbnail style='height:200px;width:270px'
         = link_to image_tag(product.photo_url(:thumb), style: 'height:200px;width:270px'),
             product_path(product), remote: true,
@@ -12,13 +12,12 @@ ul.thumbnails
         h3 = link_to product.title, product_path(product), remote: true,
                                                                  'data-toggle'=>"modal",
                                                                  'data-target' => '#productModal'
-      .p
+      p
         = product.description
-      / .p
-      /   .btn.btn-success
-      /     = link_to show_price(product.price), product_path(product), remote: true ,
-      /                                                            'data-toggle'=>"modal",
-      /                                                            'data-target' => '#productModal'
+      p
+        = link_to 'Подробнее', product_path(product), remote: true ,
+                                                                 'data-toggle'=>"modal",
+                                                                 'data-target' => '#productModal'
 
 .modal.fade.bs-example-modal-lg id='productModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
 

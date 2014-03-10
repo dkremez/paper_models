@@ -3,6 +3,8 @@ PaperModels::Application.routes.draw do
   ActiveAdmin.routes(self)
   get '/', to: 'home#index'
   get '/about_us', to: 'home#about_us'
+  # get '/development', to: 'home#development'
+  # get '/articles', to: 'home#articles'
   root :to => 'home#index'
 
   resources :products, :only => [:index,:show] 

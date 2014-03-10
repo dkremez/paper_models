@@ -1,3 +1,4 @@
+h4 Напиши мне:
 = form_tag(contact_us_path) do
   .form-group
     = label_tag 'name', 'Имя'
@@ -6,7 +7,7 @@
     = label_tag 'email', 'Email'
     = email_field_tag 'email', nil, class: 'form-control', placeholder: 'Ваш email адрес'
   .form-group
-    = label_tag 'comments', 'Отзыв'
-    = text_area_tag 'comments', nil, class: 'form-control', rows: 4, placeholder: 'Отзыв...'
+    = label_tag 'comments', 'Вопрос'
+    = text_area_tag 'comments', nil, class: 'form-control', rows: 4, placeholder: 'Вопрос...'
   
   = submit_tag nil, class: 'btn btn-default btn-about pull-left'
