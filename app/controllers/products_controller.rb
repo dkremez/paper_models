@@ -9,8 +9,8 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id]) 
-    @admin_images = @product.images.admin || []
-    @users_images = @product.images.user || []
+    @admin_images = Image.admins_photos.where(product_id: @product.id) || []
+    @users_images = Image.users_photos.where(product_id: @product.id) || []
     respond_to do |format|
       format.html
       format.js 
