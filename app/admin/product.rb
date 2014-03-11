@@ -5,7 +5,7 @@ ActiveAdmin.register Product do
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   # permit_params :list, :of, :attributes, :on, :model
-  permit_params :title, :description, :scale, :format, :number_of_sheets, :author, :price, :complexity, :publication_date, :photo, :buy_url
+  permit_params :title, :description, :scale, :format, :number_of_sheets, :author, :price, :complexity, :publication_date, :photo, :buy_url, :hit
  
   # or
   #

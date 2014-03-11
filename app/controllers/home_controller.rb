@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @reviews = Review.limit(4)
-    @products = Product.limit(4)
+    @products = Product.where("hit = ?", true)
   end
 
   def about_us
