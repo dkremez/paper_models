@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @reviews = Review.limit(4)
+    @products = Product.limit(4)
   end
 
   def about_us
@@ -19,7 +20,10 @@ class HomeController < ApplicationController
     name = params[:name]
     email = params[:email]
     body = params[:comments]
-    Contact.contact_email(name, email, body).deliver
-    redirect_to :back, notice: 'Message sent'
+    if Contact.contact_email(name, email, body).deliver
+      redirect_to :back, notice: 'Message sent'
+    else
+      redirect_to :back, notice: 'Message don\'t sent. Try again later'
+    end
   end
 end

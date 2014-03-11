@@ -1,5 +1,5 @@
 class Contact < ActionMailer::Base
-  default to: "kremez19@gmail.com"
+  default to: 'Papercrafter102@gmail.com'
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -9,9 +9,9 @@ class Contact < ActionMailer::Base
     @name = name
     @email = email
     @body = body
-
-    mail from: @email, subject: 'Contact Request' do |format|
-      format.text { render :text => body }
+    # mail(:to => "me@me.com", :subject => "Contact Request!", :from => @email, :content_type => "text/html")
+    mail from: @email, to: 'papercrafter102@gmail.com', subject: 'Contact Request' do |format|
+      format.text { render :text => @body }
     end
   end
 end

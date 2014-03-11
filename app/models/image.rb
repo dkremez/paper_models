@@ -4,6 +4,6 @@ class Image < ActiveRecord::Base
 
   TYPES = ["admin", "users"]
 
-  scope :admins_photos, where(photo_type: 'admin')
-  scope :users_photos, where(photo_type: 'users')
+  scope :admins_photos, -> { where(photo_type: 'admin') }
+  scope :users_photos,-> { where(photo_type: 'users') }
 end

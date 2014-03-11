@@ -4,37 +4,41 @@
       h2 Papercrafter &nbsp;
       h4 Mагазин бумажных моделей автомобилей.
     .span4.offset2
-      h3
-        | Собери свою машину мечты!
+      h3 Собери свою 
+      h3 машину мечты!
 .text-center
   = link_to 'Каталог', products_path, class: 'btn btn-large btn-success'
 br
-.row-fluid
-  .span8
-    .bs-docs-example
-      #myCarousel.carousel.slide.img-polaroid
-        ol.carousel-indicators
-          li.active data-slide-to="0" data-target="#myCarousel"
-          li data-slide-to="1" data-target="#myCarousel"
-          li data-slide-to="2" data-target="#myCarousel"
-        .carousel-inner
+.row
+  .span6
+    h2 = 'Хиты продаж:'
+    == render file: 'products/index'
+    / .bs-docs-example
+    /   #myCarousel.carousel.slide.img-polaroid
+    /     ol.carousel-indicators
+    /       li.active data-slide-to="0" data-target="#myCarousel"
+    /       li data-slide-to="1" data-target="#myCarousel"
+    /       li data-slide-to="2" data-target="#myCarousel"
+    /     .carousel-inner
 
-          .item.active
-            = image_tag("home/1.png")
+    /       .item.active
+    /         = image_tag("home/1.png")
              
-          .item
-            = image_tag("home/2.png")
+    /       .item
+    /         = image_tag("home/2.png")
               
-          .item
-            = image_tag("home/3.png")
+    /       .item
+    /         = image_tag("home/3.png")
               
-        a.left.carousel-control data-slide="prev" href="#myCarousel" &lsaquo; 
-        a.right.carousel-control data-slide="next" href="#myCarousel" &rsaquo;
-  .span4.hero-unit
+        / a.left.carousel-control data-slide="prev" href="#myCarousel" &lsaquo; 
+        / a.right.carousel-control data-slide="next" href="#myCarousel" &rsaquo;
+  .span3.offset1.hero-unit
     h2 Отзывы:
     - @reviews.each do |review|
       h4 = review.author
       p = review.body
     = link_to 'Все отзывы', root_path
+br
+
 
 / a.btn.btn-large.btn-success.text-center href="#" Статьи

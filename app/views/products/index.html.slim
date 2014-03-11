@@ -15,6 +15,9 @@ ul.thumbnails
       p
         = product.description
       p
+        | Цена: 
+        = show_price(product.price)
+      p
         = link_to 'Подробнее', product_path(product)
 
 .modal.fade.bs-example-modal-lg id='productModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
