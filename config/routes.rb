@@ -1,4 +1,6 @@
 PaperModels::Application.routes.draw do
+  
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get '/', to: 'home#index'
@@ -9,6 +11,7 @@ PaperModels::Application.routes.draw do
 
   resources :products, :only => [:index,:show] 
   resources :images, :only => [:show]
+  resources :news, :only => [:index,:show] 
   
   devise_for :users
 

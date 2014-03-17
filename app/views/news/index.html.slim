@@ -1,0 +1,16 @@
+- @news.each do |news|
+  hr
+  h1 
+    = link_to news.title, news
+  hr
+  .row
+    .span3
+      = link_to image_tag(news.photo_url(:thumb), class: 'img-polaroid'), news
+    .span9
+      = truncate(news.body, :length => 600)
+      = link_to 'подробнее', news
+  hr
+      
+
+br
+
