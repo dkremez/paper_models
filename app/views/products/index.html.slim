@@ -14,11 +14,18 @@ ul.thumbnails
                                                                  'data-target' => '#productModal'
       p
         = product.description
-      p
+      h4
         | Цена: 
         = show_price(product.price)
+      - if product.hit == true
+        p
+          #until2d
+      
       p
-        = link_to 'Подробнее', product, method: :get
+        .span1
+          = link_to 'Подробнее', product, class: 'btn pull-left', method: :get
+        .span1
+          = button_to show_price(product.price), product.buy_url , class: 'btn btn-success pull-left', method: :get
 
 .modal.fade.bs-example-modal-lg id='productModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
 
