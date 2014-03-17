@@ -12,12 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require bootstrap.lightbox
 //= require_tree .
-$(document).on 'page:change', ->
-  if window._gaq?
-    _gaq.push ['_trackPageview']
-  else if window.pageTracker?
-    pageTracker._trackPageview()
+//= require turbolinks
