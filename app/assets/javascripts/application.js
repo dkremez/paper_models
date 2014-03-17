@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.countdown
 //= require bootstrap
 //= require bootstrap.lightbox
 //= require_tree .

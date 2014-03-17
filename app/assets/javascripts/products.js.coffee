@@ -3,7 +3,3 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
   $('productModal').modal('options')
-
-jQuery(document).on "ready page:load", ->
-  $ ->
-    $("#until2d").countdown until: "+2d"
