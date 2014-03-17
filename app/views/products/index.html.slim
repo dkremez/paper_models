@@ -16,11 +16,7 @@ ul.thumbnails
         = product.description
       h4
         | Цена: 
-        = show_price(product.price)
-      - if product.hit == true
-        p
-          #until2d
-      
+        = show_price(product.price)     
       p
         .span1
           = link_to 'Подробнее', product, class: 'btn pull-left', method: :get
