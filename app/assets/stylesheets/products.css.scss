@@ -1,15 +1,18 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#productModal 
-{
-    width: 700px;
-    margin-left:  -350px !important; 
-} 
+// #productModal 
+// {
+//     width: 700px;
+//     margin-left:  -350px !important; 
+// } 
 
-#productModal .modal-body {
-    max-height: 525px;
-    color: white
+// #productModal .modal-body {
+//     max-height: 525px;
+//     color: white
+// }
+#productModal .model-body .row-fluid .span5 {
+  margin: 15px;
 }
 
 .span5 img {

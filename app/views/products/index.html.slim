@@ -18,7 +18,7 @@ ul.thumbnails
         | Цена: 
         = show_price(product.price)
       p
-        = link_to 'Подробнее', product_path(product)
+        = link_to 'Подробнее', product, method: :get
 
 .modal.fade.bs-example-modal-lg id='productModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
 

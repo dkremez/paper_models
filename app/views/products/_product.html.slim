@@ -30,4 +30,4 @@
           = button_to "Детальная информация", @product , class: 'btn btn-primary pull-left', method: :get
         .span2
           = button_to show_price(@product.price), @product.buy_url , class: 'btn btn-success pull-left', method: :get
-        = button_to 'Back', products_path , class: 'btn btn-primary', method: :get
+        = button_to 'Back', :back , class: 'btn btn-primary', method: :get
